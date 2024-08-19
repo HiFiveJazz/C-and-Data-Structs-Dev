@@ -17,16 +17,16 @@ int main() {
   printf("You have %d tries left\n",tries);
   
   /* Looping for ensuring number is between 0 and 20*/
-  do { 
-    printf("Enter a guess: ");
-    scanf("%d",&guess);
-      if (guess > 20 || guess < 0) {
-          numberInRange = false;
-          printf("Your number is not between 0 and 20\n");
-          continue;
-        }
-    numberInRange = true;
-  } while(numberInRange = false);
+    do { 
+      printf("Enter a guess: ");
+      scanf("%d",&guess);
+        if (guess > 20 || guess < 0) {
+            numberInRange = false;
+            printf("Your number is not between 0 and 20\n");
+            continue;
+          }
+      numberInRange = true;
+    } while(numberInRange == false);
 
     if (guess > randomNumber) {
       printf("Your guess is \e[1m\e[4m\e[3mgreater\e[0m than the random number.\n");
