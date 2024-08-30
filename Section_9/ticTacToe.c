@@ -32,7 +32,7 @@ int drawBoard() {
 
 int markBoard(int player) {
 char mark;
-int choice, out = 0;
+int choice, out = 0, out2 = 0;
 
 while (out == 0){  
   out = 0;
@@ -43,20 +43,24 @@ while (out == 0){
     printf("Invalid choice. ");
   } 
   else {
-    out = 1;
-    switch (player) {
-      case 1:
-        mark = 'X';
-        printf("Test X: %d\n", choice);
-        break;
-        case 2:
-        printf("Test Y: %d\n", choice);
-        mark = 'O';
-        break;
-      default:
-        printf("Error: Player is not defined as 1 or 2\n");
-      square[1] = mark;
-    }
+    out2 = 0;
+    while (out2 == 0){  
+      out = 1;
+      switch (player) {
+        case 1:
+          mark = 'X';
+          /* printf("Test X: %d\n", choice); */
+          break;
+          case 2:
+          /* printf("Test Y: %d\n", choice); */
+          mark = 'O';
+          break;
+        default:
+          printf("Error: Player is not defined as 1 or 2\n");
+      }
+      if (square[choice] == X) { // TODO: HELP 
+        square[choice] = mark;
+      }
   }
 }
 }
